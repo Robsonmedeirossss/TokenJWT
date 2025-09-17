@@ -1,0 +1,14 @@
+{
+  "name": "jwt2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.5.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  }
+}
