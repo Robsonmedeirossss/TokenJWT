@@ -25,7 +25,10 @@ export function verify({ token, secret }: IOptionsVerify){
     if(signature !== signatureSent) throw new Error('Token JWT invalid');
 
 
-    const decodedPayload: IJwtpayload = JSON.parse(Buffer.from(payloadSent!, 'base64url').toString('utf-8'));
+    const decodedPayload: IJwtpayload = JSON.parse(
+        Buffer.from(payloadSent!, 'base64url')
+        .toString('utf-8')
+    );
 
     if(Date.now() > decodedPayload.exp){
         throw new Error('Token expired');

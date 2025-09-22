@@ -1,18 +1,18 @@
 import { sign } from "./jwt/sign";
 import { verify } from "./jwt/verify";
 
-const secret = "secreta";
 
-const token = sign({
+
+const acessToken = sign({
     data: {
         sub: "robson.medeiros#123",
         exp: Date.now() + (24 * 60 * 60 * 1000),
         admin: false,
     },
-    secret,
+    secret: process.env.SECRET_KEY!,
 });
 
-const payload = verify({token, secret: "secreta"});
+const payload = verify({token: acessToken, secret: process.env.SECRET_KEY!});
 
-console.log(token)
-console.log(payload)
+console.log({ acessToken })
+console.log({ payload })
