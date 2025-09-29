@@ -14,6 +14,7 @@ const acessToken = sign({
 
 console.log({ acessToken })
 
+
 try {
     const payload = verify({token: acessToken, secret: process.env.SECRET_KEY!});
     console.log({ payload })
