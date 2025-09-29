@@ -67,6 +67,10 @@ try {
 }
 ```
 
+## Testes
+
+Para executar os testes, rode no seu terminal o comando `yarn jest` ou `yarn test`, o script já foi adicionado no package.json, o jest já irá procurar dentro do seu diretório um arquivo de testes, quando encontrar irá executar.
+
 ## Aviso de Segurança
 
-Esta implementação foi desenvolvida exclusivamente para fins de estudo. Não utilize este código em ambientes de produção. Para aplicações reais, recorra a bibliotecas auditadas e mantidas pela comunidade, como jsonwebtoken ou jose.
+Esta implementação foi desenvolvida exclusivamente para fins de estudo. Não utilize este código em ambientes de produção. Para aplicações reais, recorra a bibliotecas auditadas e mantidas pela comunidade, como jsonwebtoken.

@@ -12,7 +12,11 @@ const acessToken = sign({
     secret: process.env.SECRET_KEY!,
 });
 
-const payload = verify({token: acessToken, secret: process.env.SECRET_KEY!});
-
 console.log({ acessToken })
-console.log({ payload })
+
+try {
+    const payload = verify({token: acessToken, secret: process.env.SECRET_KEY!});
+    console.log({ payload })
+} catch (error) {
+    console.log(error);
+}

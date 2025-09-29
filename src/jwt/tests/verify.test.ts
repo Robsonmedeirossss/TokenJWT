@@ -1,5 +1,5 @@
-import { verify } from './verify';
-import { sign } from './sign';
+import { verify } from '../verify';
+import { sign } from '../sign';
 
 const secret = 'seu-segredo-de-teste';
 const outroSecret = 'um-segredo-diferente';
@@ -16,7 +16,7 @@ describe('verify', () => {
 
     it('deve lançar um erro se a assinatura for inválida', () => {
         const token = sign({ data: { sub: '123', exp: Date.now() + 5000, admin: false }, secret });
-        expect(() => verify({ token, secret: outroSecret })).toThrow('Token JWT invalid');
+        expect(() => verify({ token, secret: outroSecret })).toThrow('Invalid signature');
     });
 
 
